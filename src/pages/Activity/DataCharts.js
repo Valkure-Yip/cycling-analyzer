@@ -97,6 +97,7 @@ export default function DataCharts({ data }) {
           gridIndex: 1,
           type: "value",
           name: "heart rate (bpm)",
+          min: 60,
         },
         {
           gridIndex: 2,
@@ -116,6 +117,7 @@ export default function DataCharts({ data }) {
       series: [
         {
           name: "Speed",
+          title: "Speed (km/h)",
           data: data.map((item) => item.speed),
           type: "line",
         },

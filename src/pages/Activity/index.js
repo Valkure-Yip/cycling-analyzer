@@ -4,6 +4,7 @@ import EChartsReact from "echarts-for-react";
 import moment from "moment";
 import DataCharts from "./DataCharts";
 import Map from "./Map";
+import "./index.scss";
 
 export default function Activity() {
   const [fitData, setFitData] = useState(null);
@@ -33,11 +34,11 @@ export default function Activity() {
   };
 
   return (
-    <div>
-      Select .FIT file:
+    <div className="activity">
+      {"Select .FIT file: "}
       <input type="file" id="file" name="file" onChange={onFileIput} />
       {fitData && <DataCharts data={fitData.records} />}
-      {fitData && <Map data={fitData.records} />}
+      <div className="map">{fitData && <Map data={fitData.records} />}</div>
     </div>
   );
 }

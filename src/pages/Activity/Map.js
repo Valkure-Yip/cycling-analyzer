@@ -168,7 +168,9 @@ export default function Map({ data }) {
   return (
     <EChartsReact
       option={setOptions(data)}
-      style={{ height: 600, width: "80%", left: "10%", position: "relative" }}
+      style={{
+        height: "100%",
+      }}
     />
   );
 }
